@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Gerencianet_Gerencianet>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Gerencianet_Gerencianet>
+    </modules>
+</config>

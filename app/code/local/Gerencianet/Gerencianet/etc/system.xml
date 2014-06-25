@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Módulo de Pagamento Gerencianet para Magento
+ * Cobrança Online
+ * etc/system.xml
+ *
+ * NÃO MODIFIQUE OS ARQUIVOS DESTE MÓDULO PARA O BOM FUNCIONAMENTO DO MESMO
+ * Em caso de dúvidas entre em contato com a Gerencianet. Contatos através do site:
+ * http://www.gerencianet.com.br
+ */
+-->
+<config>
+   <sections>
+        <payment>
+            <groups>
+                <gerencianet translate="label" module="paygate">
+                    <label>Gerencianet</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>656</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <active translate="label">
+                          <label>Enabled</label>
+                          <frontend_type>select</frontend_type>
+                          <source_model>adminhtml/system_config_source_yesno</source_model>
+                          <sort_order>1</sort_order>
+                          <show_in_default>1</show_in_default>
+                          <show_in_website>1</show_in_website>
+                          <show_in_store>0</show_in_store>
+                        </active>
+                        <accesstoken translate="label">
+                          <label>Token de Acesso</label>
+                          <frontend_type>text</frontend_type>
+                          <sort_order>1</sort_order>
+                          <show_in_default>1</show_in_default>
+                          <show_in_website>1</show_in_website>
+                          <show_in_store>0</show_in_store>
+                        </accesstoken>
+                        <returnurl translate="label">
+                          <label>Url de Redirecionamento</label>
+                          <frontend_type>text</frontend_type>
+                          <sort_order>2</sort_order>
+                          <show_in_default>1</show_in_default>
+                          <show_in_website>1</show_in_website>
+                          <show_in_store>0</show_in_store>
+                        </returnurl>
+                    </fields>
+                </gerencianet>
+            </groups>
+        </payment>
+    </sections>
+</config>

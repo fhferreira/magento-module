@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Módulo de Pagamento Gerencianet para Magento
+ * Cobrança Online
+ * etc/config.xml
+ *
+ * NÃO MODIFIQUE OS ARQUIVOS DESTE MÓDULO PARA O BOM FUNCIONAMENTO DO MESMO
+ * Em caso de dúvidas entre em contato com a Gerencianet. Contatos através do site:
+ * http://www.gerencianet.com.br
+ */
+-->
+<config>
+    <modules>
+       <Gerencianet_Gerencianet>
+          <version>0.1.0</version>
+       </Gerencianet_Gerencianet>
+    </modules>
+ 
+    <global>
+        <models>
+          <gerencianet>
+            <class>Gerencianet_Gerencianet_Model</class>
+          </gerencianet>
+        </models>
+        <helpers>
+          <gerencianet>
+            <class>Gerencianet_Gerencianet_Helper</class>
+          </gerencianet>
+        </helpers>
+    </global>
+ 
+    <default>
+        <payment>
+            <gerencianet>
+                <active>1</active>
+                <model>gerencianet/paymentMethod</model>
+                <title>Gerencianet</title>
+                <allowspecific>0</allowspecific>
+                
+            </gerencianet>
+         </payment>
+    </default>
+
+    <frontend>
+      <routers>
+        <gerencianet>
+          <use>standard</use>
+          <args>
+            <module>Gerencianet_Gerencianet</module>
+            <frontName>gerencianet</frontName>
+          </args>
+        </gerencianet>
+      </routers>
+    </frontend>
+</config>
